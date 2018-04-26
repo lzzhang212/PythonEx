@@ -3,7 +3,7 @@
 # @Author: lzzhang
 # @Date:   2018-04-25 14:08:49
 # @Last Modified by:   lzzhang
-# @Last Modified time: 2018-04-25 16:13:57
+# @Last Modified time: 2018-04-26 16:08:12
 
 class MyQueue(object):
     def __init__(self,size):
@@ -30,7 +30,7 @@ class MyQueue(object):
         return self.front == self.rear
 
     def is_full(self):
-        return (self.rear - self.front + 1) == self.size
+        return (self.rear - self.front) == self.size
 
     def show(self):
         print(self.queue)
@@ -41,7 +41,7 @@ if __name__ == '__main__':
         q.enqueue(i)
     q.show()
     print(q.rear,q.front)
-#    q.enqueue(100)
+    q.enqueue(100)
     print(q.is_empty())
     print(q.is_full())
     for i in range(3):
